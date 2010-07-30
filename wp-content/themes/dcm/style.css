@@ -454,7 +454,7 @@ div.menu li {
 #access ul ul {
 	display:none;
 	position:absolute;
-	top:38px;
+	top:30px;
 	left:0;
 	float:left;
 	box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
@@ -471,7 +471,7 @@ div.menu li {
 	top:0;
 }
 #access ul ul a {
-	background:#333;
+	background:#F3AF32;
 	height:auto;
 	line-height:1em;
 	padding:10px;
@@ -479,8 +479,8 @@ div.menu li {
 }
 #access li:hover > a,
 #access ul ul :hover > a {
-	color:#fff !important;
-	background:#333;
+	color:#000 !important;
+	background:#F2CB65;
 }
 #access ul li:hover > ul {
 	display:block;
