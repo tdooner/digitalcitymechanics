@@ -139,7 +139,7 @@ h3#reply-title,
 .wp-caption-text,
 input[type=submit]
 {
-	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	font-family:Tahoma,Geneva,Kalimati,sans-serif;
 }
 pre {
 	font-family: "Courier 10 Pitch", Courier, monospace;
@@ -333,17 +333,18 @@ a:hover {
 -------------------------------------------------------------- */
 
 #site-title {
-	float: left;
-	width: 100%;
-	font-size: 30px;
-	line-height: 36px;
+	width: 711px;
+	font-size: 38px;
+	line-height: 50px;
 	height:62px;
 	font-family:"Trebuchet MS";
 	padding-top:13px;
-	background:url('images/header_bg.png') repeat-x;
+	background:url('images/top_icons.png') no-repeat scroll 0 0 #F1F1F1;
+	margin:auto;
 }
 #site-title a {
 	color: #000;
+	text-shadow: rgba(100, 73, 0, .21) 1px 3px 3px;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -359,6 +360,10 @@ a:hover {
 	border:0 !important;
 	clear:none !important;
 	float:left;
+}
+#site-title-container {
+	width:100%;
+	background:url('images/header_bg.png')
 }
 #site-description {
 	clear: right;
@@ -381,7 +386,32 @@ a:hover {
 	background-color:#262626;
 	width:100%;
 	clear:both;
+	height:250px;
 	text-align:center;
+	border-bottom:4px solid #F3AF32;
+}
+#header-gallery div.widget-area {
+	margin:auto;
+	width:100%;
+}
+#header-gallery ul li {
+	float:left;
+	padding-top:10px;
+	height:240px;
+	width:33%;
+}
+#header-gallery ul li:hover {
+	background-color:#4C4C4C;
+}
+#header-gallery div.widget_sp_image-description {
+	display:none;
+}
+#header-gallery h3 {
+	color:#9A9A9A;
+	font-variant:small-caps;
+}
+#header-gallery a.widget_sp_image-image-link img {
+	clear:none;
 }
 
 /* =Menu
@@ -413,9 +443,13 @@ div.menu li {
 #access a {
 	display:block;
 	text-decoration:none;
-	color:#aaa;
+	color:#000;
 	padding:0 10px;
 	line-height:30px;
+	font-variant:small-caps;
+}
+#access a:first-letter {
+	font-size:1.2em;
 }
 #access ul ul {
 	display:none;
@@ -445,7 +479,7 @@ div.menu li {
 }
 #access li:hover > a,
 #access ul ul :hover > a {
-	color:#fff;
+	color:#fff !important;
 	background:#333;
 }
 #access ul li:hover > ul {
@@ -455,7 +489,7 @@ div.menu li {
 #access ul li.current-menu-ancestor > a,
 #access ul li.current-menu-item > a,
 #access ul li.current-menu-parent > a {
-	color: #fff;
+	color: #000;
 }
 
 * html #access ul li.current_page_item a,
@@ -542,6 +576,10 @@ div.menu li {
 #content tr.odd td {
 	background: #F2F7FC;
 }
+div.post {
+	background:url("images/cleveland_outline.png") no-repeat scroll 425px 0 transparent;
+	padding-top:10px;
+}
 .hentry {
 	margin: 0 0 48px 0;
 }
@@ -577,6 +615,7 @@ div.menu li {
 	color: #FF4B33;
 }
 #content .entry-title {
+	float:left;
 	color: #000;
 	font-size: 21px;
 	line-height: 1.3em;
@@ -595,6 +634,9 @@ div.menu li {
 .entry-meta {
 	color: #888;
 	font-size: 12px;
+	position:relative;
+	left:10px;
+	top:4px;
 }
 .entry-meta abbr,
 .entry-utility abbr {
@@ -603,6 +645,12 @@ div.menu li {
 .entry-meta abbr:hover,
 .entry-utility abbr:hover {
 	border-bottom: 1px dotted #666;
+}
+.entry-separator {
+	clear:both;
+	background-color:#F6D283;
+	height:3px;
+	width:610px;
 }
 .entry-content,
 .entry-summary {

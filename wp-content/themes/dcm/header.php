@@ -45,16 +45,16 @@
 	<div id="header">
 		<div id="masthead">
 			<div id="branding" role="banner">
+				<div id="site-title-container">
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 				<<?php echo $heading_tag; ?> id="site-title">
 				<div id="header-container">
-					<img src="<?php bloginfo( 'template_url' )?>/images/top_fist.png" width="94" height="62" style="padding-right:60px;" />
-					<span>
+						<span>
 						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</span>
-					<img src="<?php bloginfo( 'template_url' )?>/images/top_skyline_cleveland.png" width="263" height="62" style="padding-left: 60px;" />
 				</div>
 				</<?php echo $heading_tag; ?>>
+				</div>
 				<div id="access" role="navigation">
 				  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 					<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
@@ -62,17 +62,26 @@
 					<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 				</div><!-- #access -->
 				<div id="header-gallery">
-					<?php
+					<?php 
+					if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
+
+							<div class="widget-area" role="complementary">
+								<ul class="xoxo">
+									<?php dynamic_sidebar( 'header-widget-area' ); ?>
+								</ul>
+							</div><!-- #secondary .widget-area -->
+
+					<?php endif; /*
 						// Check if this is a post or page, if it has a thumbnail, and if it's a big one
 						if ( is_singular() &&
 								has_post_thumbnail( $post->ID ) &&
-								( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
+								( /* $src, $width, $height *//* $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
 								$image[1] >= HEADER_IMAGE_WIDTH ) :
 							// Houston, we have a new header image!
 							echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
 						else : ?>
 							<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-						<?php endif; ?>
+						<?php endif; */ ?>
 				</div><!-- #header-gallery -->
 			</div><!-- #branding -->
 
