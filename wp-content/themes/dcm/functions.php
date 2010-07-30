@@ -419,22 +419,23 @@ function twentyten_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 
-	// Area 1, located at the top of the sidebar.
+	// Area 2, located below the Primary Widget Area in the sidebar. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'Left Sidebar', 'twentyten' ),
-		'id' => 'primary-widget-area',
-		'description' => __( 'Of the two sidebars to the right, this is the leftmost one.', 'twentyten' ),
+		'name' => __( 'Left Right-Hand Sidebar', 'twentyten' ),
+		'id' => 'secondary-widget-area',
+		'description' => __( 'Of the two sidebars on the right, this is the leftmost one', 'twentyten' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 
-	// Area 2, located below the Primary Widget Area in the sidebar. Empty by default.
+	
+	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
-		'name' => __( 'Right Sidebar', 'twentyten' ),
-		'id' => 'secondary-widget-area',
-		'description' => __( 'Of the two sidebars on the right, this is the rightmost one', 'twentyten' ),
+		'name' => __( 'Far Right-Hand Sidebar', 'twentyten' ),
+		'id' => 'primary-widget-area',
+		'description' => __( 'Of the two sidebars to the right, this is the rightmost one.', 'twentyten' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
